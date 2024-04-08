@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/wow.css">
+    <link rel="icon" href="./assets/img/cropped-mark.jpg" sizes="32x32">
+
+    <title>Peapod</title>
+</head>
+<body>
+    <div id="hamburg-btn" class="hamburg-btn">
+        <span></span>
+    </div>
+    
+    <div class="p-header__sp">
+
+    </div>  
+    <header class="p-header">
+
+    </header>
+
+    <main class="p-main">
+        <div class="p-fv">
+            
+        </div>
+
+    </main>
+
+    <footer class="p-footer">
+
+    </footer>
+
+    <script src=""></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        var swiperline = new Swiper(".lineupSwiper ", {
+            slidesPerView: 6,
+            // spaceBetween: 25,
+            // loop: true,
+            centeredSlides: true,
+            speed: 1500,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 6,
+                }
+            },
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          effect: "fade",
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            type: 'bullets'
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+    <script src="./assets/js/custom.js"></script>
+</body>
+</html>
