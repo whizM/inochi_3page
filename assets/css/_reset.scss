@@ -4,12 +4,23 @@
 
 @import './media';
 
+$natural500: #1B2023;
+$natural400: #41484D;
+$natural300: #737A80;
+$natural200: #B6BBBF;
+$natural100: #EBEEF0;
+$inochi_red: #E60012;
+$inochi_blue: #0068B7;
+
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 	vertical-align: bottom;
 	border: 0;  
+  max-width: 1440px;
+  font-family: $font-noto;
+  color: $natural500;
 }
 
 a{
@@ -25,7 +36,7 @@ html{
   @include media-sp {
     font-size: calc((100 / 390) * 1vw);
   }
-  
+  overflow-x: hidden;
 }
 
 *::selection{

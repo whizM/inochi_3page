@@ -11,13 +11,19 @@
   }
   
 @mixin media-sp {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
   
-@mixin media-is-pc {
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+@mixin media-pc-sm {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-sp-sp {
+  @media screen and (max-width: 390px) {
     @content;
   }
 }

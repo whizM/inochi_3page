@@ -1,0 +1,13 @@
+.is-pc {
+    display: flex;
+    @include media-sp {
+        display: none!important;
+    }
+}
+
+.is-sp {
+    display: none!important;
+    @include media-sp {
+        display: flex!important;
+    }
+}
