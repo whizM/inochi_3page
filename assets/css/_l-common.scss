@@ -11,3 +11,36 @@
         display: flex!important;
     }
 }
+
+.container {
+    max-width: 1105px;
+    padding-left: 29px;
+    padding-right: 29px;
+    margin: 0 auto;
+    z-index: 99;
+    position: relative;
+  }
+
+  .sp-container {
+    @include media-sp-sp {
+        padding: 24px 12px;
+    }
+  }
+
+  .red_dash {
+    color: tomato;
+  }
+
+  .blur-bg {
+    position: absolute;
+    top: 0;
+    left: 29px;
+    height: 100%;
+    width: calc(100% - 58px);
+    z-index: 0;
+    @include media-sp-sp {
+        background: rgba(255, 255, 255, 0.01);
+        backdrop-filter: blur(6px);
+        border-radius: 8px;
+    }
+  }

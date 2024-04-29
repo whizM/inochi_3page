@@ -7,7 +7,7 @@
     @include media-sp-sp {
         width: 28px;
         height: 16px;
-        top: 24px;
+        top: 19px;
     }
     justify-content: center;
     cursor: pointer;
@@ -178,9 +178,6 @@
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
 
-    
-
-
     &__logo {
         @include media-sp-sp {
             display: none;
@@ -207,7 +204,7 @@
     @include media-sp-sp {
         justify-content: end;
         padding-right: 78px;
-        height: 64px;
+        height: 54px;
     }
 }
 
@@ -346,7 +343,9 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    cursor: pointer;
     @include media-sp-sp {
+        margin-top: 54px;
         font-weight: 400;
         font-size: 10px;
         line-height: 14px;
