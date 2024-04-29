@@ -1,0 +1,381 @@
+.hamburg-btn {
+    position: fixed;
+    right: 34px;
+    top: 30px;
+    width: 59px;
+    height: 29px;
+    @include media-sp-sp {
+        width: 28px;
+        height: 16px;
+        top: 19px;
+    }
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    span {
+        width: 59px;
+        height: 3px;
+        background: #2e2e2e;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -16px;
+            width: 59px;
+            height: 3px;
+            @include media-sp-sp{
+                width: 28px;
+                height: 2px;
+            }
+            background: #2e2e2e;
+        }
+        @include media-sp-sp{
+            width: 28px;
+            height: 2px;
+        }
+    }
+    &.is-active {
+        width: 59px;
+        height: 59px;
+        @include media-sp-sp{
+            width: 28px;
+            height: 28px;
+            padding-top: 42px;
+        }
+        span {
+            transform: rotate(45deg);
+            background: white;
+            &::after {
+                width: 59px;
+                height: 3px;
+                transform: rotate(90deg);
+                background: white;
+                bottom: 0;       
+                @include media-sp-sp{
+                    width: 28px;
+                    height: 2px;
+                }         
+            }
+        }
+
+    }
+}
+.c-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    overflow: hidden;
+    background: #1B2023;
+    width: 100%;        
+    transition: all ease 0.35s;
+    z-index: 9999;
+    @include media-sp {
+        padding-left: 0px;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        gap: 243px;
+        padding-top: 114px;
+        padding-left: 114px;
+        @include media-sp {
+            background: #41484D;
+            border-radius: 16px;
+            margin: 48px 28px;
+            padding: 144px 24px 148.5px;
+            gap: 96px;
+        }
+    }
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        align-items: flex-start;
+        .menu-item a {
+            font-family: $font-noto;
+            line-height: 2.5;
+            color: white;   
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 52.13px;
+            text-align: left;
+            @include media-sp {
+                padding-left: 26px;
+                gap: 12px;
+                font-size: 24px;
+                line-height: 34.75px;
+            }
+        }   
+        @include media-sp {
+            gap: 12px;
+            padding-bottom: 33px;
+        }
+    }
+    &__logo {
+        @include media-sp {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__date {
+        font-family: $font-noto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20.27px;
+        letter-spacing: 0.68em;
+        text-align: left;
+        padding-top: 17px;
+        color: white;
+        @include media-sp {
+            font-size: 8px;
+            line-height: 11.58px;
+            letter-spacing: 68%;
+            text-align: center;
+        }
+    }
+    &__copyright {
+        padding-top: 131px;
+        font-family: $font-noto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23.17px;
+        letter-spacing: 0.1em;
+        text-align: left;
+        color: white;
+        @include media-sp {
+            font-size: 8px;
+            line-height: 11.58px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            padding-top: 28.84px;
+        }
+    }
+    &.h-active {
+        display: inherit;
+        transition: all ease 0.35s;
+        @include media-sp {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    }  
+}
+.c-header {
+    z-index: 998;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0px 134px 0px 35px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+
+    &__logo {
+        @include media-sp-sp {
+            display: none;
+        }
+    }
+    &__lang {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 16px;
+        font-family: $font-noto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+        @include media-sp-sp {
+            font-size: 12px;
+            line-height: 17.38px;
+        }
+        li {
+           &.current-lang {
+            a {
+                color: $inochi_red;
+            }
+           }
+        }
+        li:not(:last-of-type)::after {
+         content: "　/　";
+     }
+    }
+    @include media-sp-sp {
+        justify-content: end;
+        padding-right: 78px;
+        height: 54px;
+    }
+    .language-switcher {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        a {
+            display: block;
+            padding: 8px 12px;
+            margin: 0 5px;
+            text-decoration: none;
+            font-size: 14px;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            &:hover .pll-active-language {
+                background-color: #f5f5f5;
+                color: #000;
+            } 
+        }       
+
+    }
+}
+
+.c-footer {
+    background: $natural500;
+    padding: 29px 196px 17px;
+    display: flex;
+    flex-direction: column;
+    @include media-sp {
+        padding: 26px 42px;
+    }
+    &__logo p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.68em;
+        padding-top: 16.67px;
+        @include media-sp-sp {
+            font-size: 10px;
+            line-height: 14px;
+            padding-top: 13.65px;
+        }
+        color: white;
+    }
+    &__main {
+        display: flex;
+        flex-direction: row;
+        gap: 91px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+           li {
+                color: white;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 29px;
+                letter-spacing: 0.1em;
+                @include media-sp {
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                a {
+                    color: white;
+                }
+           } 
+        }
+        @include media-sp {
+            flex-direction: column;
+            justify-content: center;
+            gap: 28px;
+        }
+    }
+    &__img {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 77px;
+        div {
+            width: 316px; 
+            height: 75px;
+            background-color: white;
+        }
+        @include media-sp {
+            display: none;
+        }
+    }
+    &__copyright {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            color: white;
+            margin-top: 59px;
+            @include media-sp-sp {
+                font-size: 10px;
+                line-height: 14px;
+                padding: 0 30px;
+            }
+        }
+    
+}
+
+.ttl-underline {
+    height: 2px;
+    width: 128px;
+    background: #1B2023;
+    margin-top: 11px;
+    @include media-sp-sp {
+        margin-top: 0px;
+        width: 80px;
+        height: 1px;
+    }
+}
+
+.inochibtn {
+    width: 389px;
+    padding: 19px 39px;
+    background-color: $inochi_red;
+    font-family: $font-noto;
+    border-radius: 50px;
+    color: white;
+    @include media-sp{
+        padding:  10px 46px;
+        width: 100%;
+    }
+    a {
+        color: white;
+    }
+}
+
+.c-pagnation {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    span {
+        color: $inochi_red;
+    }
+    @include media-sp-sp {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        margin-top: 24px;
+    }
+}
+
+.bread_crumb {
+    margin-top: 80px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    @include media-sp-sp {
+        margin-top: 54px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+    }
+}

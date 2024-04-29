@@ -1,0 +1,27 @@
+<label>ご氏名<span style="color: #B30010;">※</span></label><br>
+<label for="fname">姓</label><br>
+[text* fname]<br>
+<label> 氏名 [text* your-name autocomplete:name] </label>
+<label for="lname">名</label><br>
+[text* lname]<br>
+
+<label class="form_content">ご氏名(カタカナ)<span style="color: #B30010;">※</span></label><br>
+<label for="fnamekata">姓</label><br>
+[text* fnamekata]<br>
+<label for="lnamekata">名</label><br>
+[text* lnamekata]<br>
+
+<label for="workname" class="form_content">ご勤務先名</label><br>
+[text workname]<br>
+<label for="affiliation_name" class="form_content">ご所属名</label><br>
+[text affiliation_name]<br>
+<label for="phone_number" class="form_content">電話番号<span style="color: #B30010;">※</span></label><br>
+[tel* phone_number]<br>
+<label for="email" class="form_content">メールアドレス<span style="color: #B30010;">※</span></label><br>
+[email* email]<br>
+<label for="email_confirm" class="form_content">メールアドレス(確認)<span style="color: #B30010;">※</span></label><br>
+[email* your-email email_confirm]<br>
+<label for="ask_content" class="form_content">お問い合わせ内容<span style="color: #B30010;">※</span></label><br>
+[textarea ask_content]</textarea>
+
+[submit id:formbtn "内容のご確認へ"]
